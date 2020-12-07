@@ -48,6 +48,7 @@ public class RegisterInterface {
 		buff[7] = (byte) ((data >> 16) & 0xff);
 		buff[8] = (byte) ((data >> 24) & 0xff);
 		
+		// send write request
 		int ret = serialPort_.writeBytes(buff, buff.length);
 		
 		return ret != -1;
@@ -61,10 +62,12 @@ public class RegisterInterface {
 		buff[3] = (byte) ((address >> 16) & 0xff);
 		buff[4] = (byte) ((address >> 24) & 0xff);
 
+		// send read request
 		int ret = serialPort_.writeBytes(buff, buff.length);
 		if(ret == -1)
 			return ret;
 		
+		// read out bytes
 		ret = serialPort_.readBytes(buff, buff.length);
 		if(ret == -1)
 			return ret;
