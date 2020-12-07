@@ -1,10 +1,6 @@
-In order to use MicroFPGA using the Micro-Manager device adapter or the Java/Python libraries, the FPGA must be configured for [serial communication](serial_communication_win.md).
-
-
-
 # Micro-Manager
 
-1. [Download]() the compiled device adapter.
+1. [Download](https://github.com/jdeschamps/MicroFPGA/releases/tag/v1.0-beta) the compiled device adapter. Note the compiled date, more recent version of Micro-Managers might require to recompile it.
 2. Place the compiled device adapter (*mmgr_del_MicroFPGA.dll*) in the installation folder of Micro-Manager.
 3. Start Micro-Manager.
 4. In the "Devices" menu, choose "Hardware Configuration Wizard...".

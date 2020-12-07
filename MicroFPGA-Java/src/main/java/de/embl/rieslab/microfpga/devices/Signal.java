@@ -1,8 +1,6 @@
 package de.embl.rieslab.microfpga.devices;
 
 import de.embl.rieslab.microfpga.regint.RegisterInterface;
-import jssc.SerialPortException;
-import jssc.SerialPortTimeoutException;
 
 public abstract class Signal {
 
@@ -26,18 +24,12 @@ public abstract class Signal {
 	
 	public boolean setState(int state) {
 		if(getDirection() == Direction.OUTPUT && isValueAllowed(state)) {
-			try {
-				regint_.write(getBaseAddress()+getID(), state);
-				return true;
-			} catch (SerialPortException e) {
-				e.printStackTrace();
-				return false;
-			}
+			return regint_.write(getBaseAddress()+getID(), state);
 		}
 		return false;
 	}
 	
-	public int getState() throws SerialPortException, SerialPortTimeoutException {
+	public int getState() {
 		return regint_.read(getBaseAddress() + getID());
 	}
 	

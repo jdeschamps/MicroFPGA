@@ -2,8 +2,6 @@ package de.embl.rieslab.microfpga.devices;
 
 import de.embl.rieslab.microfpga.MicroFPGAController;
 import de.embl.rieslab.microfpga.regint.RegisterInterface;
-import jssc.SerialPortException;
-import jssc.SerialPortTimeoutException;
 
 public class LaserTrigger {
 
@@ -24,7 +22,7 @@ public class LaserTrigger {
 		return mode_.setState(value);
 	}
 	
-	public int getMode() throws SerialPortException, SerialPortTimeoutException {
+	public int getMode() {
 		return mode_.getState();
 	}
 	
@@ -32,7 +30,7 @@ public class LaserTrigger {
 		return duration_.setState(value);
 	}
 	
-	public int getDuration() throws SerialPortException, SerialPortTimeoutException {
+	public int getDuration() {
 		return duration_.getState();
 	}
 	
@@ -40,7 +38,7 @@ public class LaserTrigger {
 		return sequence_.setState(value);
 	}
 	
-	public int getSequence() throws SerialPortException, SerialPortTimeoutException {
+	public int getSequence() {
 		return sequence_.getState();
 	}
 	

@@ -9,8 +9,6 @@ import de.embl.rieslab.microfpga.devices.PWM;
 import de.embl.rieslab.microfpga.devices.Servo;
 import de.embl.rieslab.microfpga.devices.TTL;
 import de.embl.rieslab.microfpga.regint.RegisterInterface;
-import jssc.SerialPortException;
-import jssc.SerialPortTimeoutException;
 
 public class MicroFPGAController {
 
@@ -49,12 +47,12 @@ public class MicroFPGAController {
 	private final int id_;
 	private final int version_;
 	
-	public MicroFPGAController(int nLasers, int nTTLs, int nServos, int nPWMs, int nAIs, String port) throws Exception {
+	public MicroFPGAController(int nLasers, int nTTLs, int nServos, int nPWMs, int nAIs) throws Exception {
 
 		regint_ = new RegisterInterface();
 
 		// attempts to connect to the interface
-		connected_ = regint_.connect(port);
+		connected_ = regint_.connect();
 		
 		if(connected_){
 			version_  = regint_.read(ADDR_VERSION);
@@ -98,11 +96,11 @@ public class MicroFPGAController {
 				}
 			}
 		} else {
-			throw new Exception("Could not connect to port ["+port+"].");
+			throw new Exception("Could not find device or could not connect.");
 		}
 	}
 
-	public void disconnect() throws SerialPortException {
+	public void disconnect() {
 		connected_ = !regint_.disconnect();
 	}
 	
@@ -133,7 +131,7 @@ public class MicroFPGAController {
 		return false;
 	}
 	
-	public int getTTLState(int channel) throws SerialPortException, SerialPortTimeoutException {
+	public int getTTLState(int channel) {
 		if(connected_ && channel >= 0 && channel < getNumberTTLs()) {
 			return ttls_.get(channel).getState();
 		}
@@ -147,7 +145,7 @@ public class MicroFPGAController {
 		return false;
 	}
 	
-	public int getPWMState(int channel) throws SerialPortException, SerialPortTimeoutException {
+	public int getPWMState(int channel) {
 		if(connected_ && channel >= 0 && channel < getNumberPWMs()) {
 			return pwms_.get(channel).getState();
 		}
@@ -161,7 +159,7 @@ public class MicroFPGAController {
 		return false;
 	}
 
-	public int getServoState(int channel) throws SerialPortException, SerialPortTimeoutException {
+	public int getServoState(int channel) {
 		if(connected_ && channel >= 0 && channel < getNumberServos()) {
 			return servos_.get(channel).getState();
 		}
@@ -187,7 +185,7 @@ public class MicroFPGAController {
 		return false;
 	}
 	
-	public int[] getLaserState(int channel) throws SerialPortException, SerialPortTimeoutException {
+	public int[] getLaserState(int channel) {
 		if(connected_ && channel >= 0 && channel < getNumberLasers()) {
 			LaserTrigger lt = lasers_.get(channel);
 			
@@ -203,7 +201,7 @@ public class MicroFPGAController {
 		return false;
 	}
 	
-	public int getLaserModeState(int channel) throws SerialPortException, SerialPortTimeoutException {
+	public int getLaserModeState(int channel) {
 		if(connected_ && channel >= 0 && channel < getNumberLasers()) {
 			return lasers_.get(channel).getMode();
 		}
@@ -217,7 +215,7 @@ public class MicroFPGAController {
 		return false;
 	}
 	
-	public int getLaserDurationState(int channel) throws SerialPortException, SerialPortTimeoutException {
+	public int getLaserDurationState(int channel) {
 		if(connected_ && channel >= 0 && channel < getNumberLasers()) {
 			return lasers_.get(channel).getDuration();
 		}
@@ -232,7 +230,7 @@ public class MicroFPGAController {
 		return false;
 	}
 	
-	public int getLaserSequenceState(int channel) throws SerialPortException, SerialPortTimeoutException {
+	public int getLaserSequenceState(int channel) {
 		if(connected_ && channel >= 0 && channel < getNumberLasers()) {
 			return lasers_.get(channel).getSequence();
 		}
