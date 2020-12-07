@@ -21,7 +21,7 @@ The addresses are defined in the [top file of the Alchitry Labs project](https:/
 Examples of the register interface implementations can be found here:
 
 - **C++**: in the [Micro-Manager device adapter](https://github.com/jdeschamps/MicroFPGA/blob/master/Device_Adapter/MicroFPGA.cpp), line 308, 325 and 338.
-- **Python**: in the [MicroFPGA-Py library](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Py/microfpga/regint.py), line 41, 52 and 67.
+- **Python**: in the [MicroFPGA-Py library](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Py/microfpga/regint.py), line 39 and 57.
 - **Java**: in the [MicroFPGA-Java library](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Java/src/main/java/de/embl/rieslab/microfpga/regint/RegisterInterface.java), line 66 and 96.
 
 

@@ -17,12 +17,10 @@ Compile the firmware and update the FPGA (see [Installing and building MicroFPGA
 
 ### Changing the baud rate in the Java and Python libraries
 
-In the Java [register interface](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Java/src/main/java/de/embl/rieslab/microfpga/regint/RegisterInterface.java) (line 35), change "100000000" to "9600" (example baud rate):
+In the Java [register interface](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Java/src/main/java/de/embl/rieslab/microfpga/regint/RegisterInterface.java) (line 28), change "100000000" to "9600" (example baud rate):
 
 ```java
-try {
-	serialPort_.setParams(9600, 8, 1, 0);
-}
+serialPort_.setComPortParameters(1000000, 8, 1, 0);
 ```
 
 In the Python [register interface](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Py/microfpga/regint.py) (line 9), change "100000000" to "9600" (example baud rate):

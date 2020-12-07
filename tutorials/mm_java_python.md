@@ -14,7 +14,7 @@
 
 #### Micro-Manager 1.4.23
 
-Note that Micro-Manager 1.4.23 does not allow selecting the default baud rate. Therefore refer to the "[Change the communication baudrate](changing_baudrate.md)" tutorial.
+Note that Micro-Manager 1.4.23 does not allow selecting the default baud rate. Therefore, refer to the "[Change the communication baudrate](changing_baudrate.md)" tutorial.
 
 
 
@@ -32,12 +32,16 @@ The Java library is provided as a Maven project. In the following step we show h
 8. Open the Example file in the de.embl.rieslab.microfpga package and run it.
 9.  The program allows you to first select the COMport corresponding to your FPGA. It will then connect to the FPGA, change some some parameters and disconnect.
 
-# Python
+This library was tested with Java 1.8 (jdk) on Windows 10.
+
+# Python 3
 
 1. Install the serial and pyserial packages for Python (for instance using pip).
 2. Check out [MicroFPGA git repository](installing_microfpga.md) (step 1 and 2).
 3. Open example.py found in the MicroFPGA-Py folder.
 4. Run the script. It will automatically detect the FPGA, connect to it, change some parameters and disconnect from it.
+
+This library was tested with Python 3.5 (Anaconda) on Windows 10.
 
 # Labview
 

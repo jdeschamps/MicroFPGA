@@ -11,7 +11,7 @@
    $ git clone https://github.com/jdeschamps/MicroFPGA.git
    ```
 
-3. Follow the instructions on [getting started with the Au FPGA](https://alchitry.com/blogs/tutorials/getting-started-with-the-au) or the [getting started with the Cu FPGA](https://alchitry.com/blogs/tutorials/getting-started-with-the-cu). This involves installing either Vivado (Au) or IceCube2 (Cu). Make sure to install [Alchitry labs](https://alchitry.com/pages/alchitry-labs).
+3. Follow the instructions on [getting started with the Au FPGA](https://alchitry.com/blogs/tutorials/getting-started-with-the-au) or [getting started with the Cu FPGA](https://alchitry.com/blogs/tutorials/getting-started-with-the-cu), this involves in particular installing either Vivado (Au) or IceCube2 (Cu). Make sure to install [Alchitry labs](https://alchitry.com/pages/alchitry-labs).
 
 4. Start Alchitry Labs and in the "Settings" menu, set the location of the compiling tools (Vivado or IceCube2).
 

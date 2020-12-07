@@ -29,5 +29,5 @@ Note that if you are using [Micro-Manager](using_micro-manager.md), the [Java](u
 
 - [Micro-Manager device adapter](https://github.com/jdeschamps/MicroFPGA/blob/master/Device_Adapter/MicroFPGA.cpp): line 43 to 49.
 - [Python library](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Py/microfpga/signals.py): line 10 to 16.
-- [Java library](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Java/src/main/java/de/embl/rieslab/microfpga/MicroFPGAController.java): line 23 to 29.
+- [Java library](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Java/src/main/java/de/embl/rieslab/microfpga/MicroFPGAController.java): line 21 to 27.
 

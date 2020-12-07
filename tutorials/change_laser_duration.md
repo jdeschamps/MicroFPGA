@@ -39,7 +39,7 @@ The laser pulse duration is encoded by a 16 bits value. The maximum value is the
 Now, the code on the user side should be changed to accept higher values, for instance:
 
 - [Micro-Manager](https://github.com/jdeschamps/MicroFPGA/blob/master/Device_Adapter/MicroFPGA.cpp): line 477, replace 65535 by 4294967295.
-- [Java](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Java/src/main/java/de/embl/rieslab/microfpga/devices/LaserTrigger.java): line 99, idem.
+- [Java](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Java/src/main/java/de/embl/rieslab/microfpga/devices/LaserTrigger.java): line 97, idem.
 - [Python](https://github.com/jdeschamps/MicroFPGA/blob/master/MicroFPGA-Py/microfpga/signals.py): line 26, idem.
 
 **Important note**: the error code for MicroFPGA is defined in au_top.luc (line 82):
