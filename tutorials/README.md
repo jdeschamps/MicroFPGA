@@ -23,4 +23,5 @@
 ### Notes
 
 - [Analog input mapping](ai_mapping.md): an overview of how the analog input pins are mapped in the Au FPGA.
+- [Application examples](application.md): how MicroFPGA is used on the Ries lab's microscopes.
 
