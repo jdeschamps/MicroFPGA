@@ -1,6 +1,10 @@
 /**********************************************************************************
-   MicroFPGA for the Au board. It contols the triggering of 10 lasers (from a camera
-   signal), 10 PWM signals, 10 servos, 10 TTL outputs and 8 analog input channels.
+   MicroFPGA for the Au board. It contols by default the triggering of 8 lasers 
+   (from a camera signal), 5 PWM signals, 7 servos, 5 TTL outputs and 8 analog 
+   input channels.
+   
+   Communication is based on the register interface (see Nojo tutorials on Alchitry's 
+   website).
    
    Written by Joran Deschamps, EMBL (2019)
 */

@@ -1,14 +1,22 @@
 ## Tutorials
 
+### Introduction
+
 - [MicroFPGA principle and signals](microfpga.md): a brief overview of MicroFPGA.
-- [Electronics](electronics.md): an overview of the electronics provided with MicroFPGA.
-- [Pins mapping](pins_br.md): summary of the default pins mapping for the Au FPGA.
 
 ### Installation tutorials
 
-1. [Installing and building MicroFPGA](installing_microfpga.md): uploading the FPGA firmware, step by step.
-2. [Communication interface](register_interface.md): summary of the communication interface.
+1. [Parts list](parts_list.md)
+2. [Installing and building MicroFPGA](installing_microfpga.md): uploading the FPGA firmware, step by step.
+3. [Communication interface](register_interface.md): summary of the communication interface.
 4. [Micro-Manager, Java and Python code](mm_java_python.md): loading MicroFPGA in Micro-Manager, Java and Python.
+5. [Wiring the FPGA with devices](wiring.md): notes on how to proceed to install MicroFPGA on the microscope.
+
+### Resources
+
+- [Electronics](electronics.md): an overview of the electronics provided along MicroFPGA.
+- [Pins mapping](pins_br.md): summary of the default pin mapping for the Au and Cu.
+- [Application examples](application.md): how MicroFPGA is used on the Ries lab's microscopes.
 
 ### Modifying the source-code
 
@@ -23,5 +31,4 @@
 ### Notes
 
 - [Analog input mapping](ai_mapping.md): an overview of how the analog input pins are mapped in the Au FPGA.
-- [Application examples](application.md): how MicroFPGA is used on the Ries lab's microscopes.
 
